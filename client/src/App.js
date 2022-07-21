@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, AppBar, Typography, Grow, Grid } from '@mui/material';
+import { Container, Grow, Grid } from '@mui/material';
 import Posts from './components/Posts/Posts';
 import Forms from './components/Forms/Forms';
 import { AppBarComponent, Heading, Image } from './styles';
