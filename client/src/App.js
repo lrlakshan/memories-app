@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Grow, Grid } from '@mui/material';
 import Posts from './components/Posts/Posts';
 import Forms from './components/Forms/Forms';
 import { AppBarComponent, Heading, Image } from './styles';
 import memories from './images/memories.png';
 
+import { useSelector, useDispatch } from "react-redux";
+import { getPosts } from "./reducers/postSlice";
+
 const App = () => {
+
+  const { posts } = useSelector((state) => state.posts);
+  const dispatch = useDispatch();
+
+/*   useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]); */
 
   return (
     <Container maxWidth="lg">
@@ -21,6 +31,7 @@ const App = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Forms />
+              <h1>{posts}</h1>
             </Grid>
           </Grid>
         </Container>

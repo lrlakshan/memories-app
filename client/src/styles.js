@@ -1,6 +1,6 @@
 import { AppBar, Typography, styled} from "@mui/material";
 
-const AppBarComponent = styled(AppBar)({
+export const AppBarComponent = styled(AppBar)({
   borderRadius: 15,
   margin: '30px 0',
   display: 'flex',
@@ -9,12 +9,10 @@ const AppBarComponent = styled(AppBar)({
   alignItems: 'center',
 });
 
-const Heading = styled(Typography)({
+export const Heading = styled(Typography)({
   color: 'rgba(0,183,255, 1)',
 });
 
-const Image = styled('img')({
+export const Image = styled('img')({
   marginLeft: '15px',
 });
-
-export {AppBarComponent, Heading, Image};
